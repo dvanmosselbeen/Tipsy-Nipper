@@ -1,0 +1,57 @@
+<!--
+    ************************************************************************
+    Tipsy Nipper
+    July 2011 David Van Mosselbeen and Ron Jensen
+    ************************************************************************
+  -->
+
+<PropertyList include="Nipper-base.xml">
+
+    <sim>
+        <description>Tippsy Nipper</description>
+        <author>Dave Van Mosselbeen - Ron Jensen</author>
+        <flight-model>jsb</flight-model>
+        <aero>Nipper</aero>
+        <status>alpha</status>
+    </sim>
+
+    <consumables>
+        <fuel>
+            <tank n="0">
+                <level-gal_us>7</level-gal_us>
+            </tank>
+        </fuel>
+    </consumables>
+
+    <property value="25.0">propulsion/engine/blade-angle</property>
+    <nasal>
+        <Nipper>
+        <file>Aircraft/Nipper/Nasal/nipper.nas</file>
+        <file>Aircraft/Nipper/Nasal/electrical.nas</file>
+        </Nipper>
+    </nasal>
+    
+    <controls>
+        <flight>
+            <aileron-trim> -0.02</aileron-trim>
+            <elevator-trim>-0.16</elevator-trim>
+            <rudder-trim>0.0</rudder-trim>
+        </flight>
+    </controls>
+
+    <payload>
+        <weight>
+            <name type="string">Pilot</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">300.0</max-lb>
+        </weight>
+        <weight>
+            <name type="string">Luggage</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">40.0</max-lb> <!-- WARNING: Max baggage "by the book" is 22.1lbs or less! -->
+        </weight>
+    </payload>
+
+</PropertyList>

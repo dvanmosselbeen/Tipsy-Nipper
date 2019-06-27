@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>FlightTime.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>ETimePointerTip</object-name>
+        <object-name>h</object-name>
+        <object-name>h_1000</object-name>
+        <object-name>h_100</object-name>
+        <object-name>h_10</object-name>
+        <object-name>h_1</object-name>
+        <object-name>h_01</object-name>  
+        <emission>
+            <red>1.0</red>
+            <green>0.2</green>
+            <blue>0.0</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+    </animation>
+
+    <animation> 
+        <type>rotate</type>
+        <object-name>ETimePointerCentre</object-name>
+        <object-name>ETimePointerTip</object-name>
+        <property>engines/engine[0]/hours-running</property>
+        <factor>360</factor>
+        <axis> 
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>h_1000</object-name>
+        <property>engines/engine[0]/hours-running</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>h_100</object-name>
+        <property>engines/engine[0]/hours-running</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>textranslate</type>
+        <object-name>h_10</object-name>
+        <property>engines/engine[0]/hours-running</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>h_1</object-name>
+        <property>engines/engine[0]/hours-running</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>h_01</object-name>
+        <property>engines/engine[0]/hours-running</property>
+        <factor>1</factor>
+        <step>0.1</step>
+        <scroll>0.1</scroll>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

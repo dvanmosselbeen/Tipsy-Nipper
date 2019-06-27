@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+  File:     eng_stamo1400.xml
+  Author:   Aero-Matic v 0.81
+
+  Inputs:
+    name:           eng_stamo1400
+    type:           piston
+    power:          45.0 hp
+    augmented?      no
+    injected?       no
+    Reference:      http://home.comcast.net/~aeroengine/Stark.html
+-->
+
+<piston_engine name="eng_stamo1400">
+  <minmp unit="INHG">       12.0 </minmp>
+  <maxmp unit="INHG">       27.5 </maxmp>
+  <displacement unit="IN3"> 90.8 </displacement>
+  <maxhp>        45.00 </maxhp>
+  <cycles>         4.0 </cycles>
+  <idlerpm>      700.0 </idlerpm>
+  <maxrpm>      3200.0 </maxrpm>
+  <sparkfaildrop>  0.075 </sparkfaildrop>
+  <volumetric-efficiency> 0.85 </volumetric-efficiency>
+<!-- Optional items that affect engine performance -->
+ <!-- Defining <bsfc> over-rides the built-in horsepower calculations -->
+ <!--<bsfc>           0.45 </bsfc>-->
+ <stroke unit="IN">  2.913  </stroke>
+ <bore unit="IN">    3.15 </bore>
+ <cylinders>         4.0  </cylinders>
+ <compression-ratio> 7.2 </compression-ratio>
+</piston_engine>

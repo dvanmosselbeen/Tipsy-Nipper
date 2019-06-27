@@ -1,0 +1,32 @@
+AC3Db
+MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.1 0.1 0.1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+OBJECT world
+kids 2
+OBJECT poly
+name "Strutlength"
+loc -0.646891 0.449084 0.465112
+crease 45.000000
+numvert 2
+0.070268 0.196917 -0.229202
+0 -0.195403 0.229202
+numsurf 1
+SURF 0x32
+mat 0
+refs 2
+1 1 0
+0 0 1
+kids 0
+OBJECT poly
+name "axis"
+loc -0.576344 0.645785 0.237485
+crease 45.000000
+numvert 2
+-0.496273 -0.0609347 0
+0.496273 0.0609347 0
+numsurf 1
+SURF 0x32
+mat 0
+refs 2
+1 1 0
+0 0 1
+kids 0

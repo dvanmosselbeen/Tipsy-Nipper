@@ -1,0 +1,116 @@
+DIM M
+DERIV RAD
+PART
+#DAMP
+
+ $FLTCON WT=300., 
+     LOOP=2.0, 
+     NMACH=1.0, MACH(1)=0.125,
+     NALT=1.0,  ALT(1)=1000.,
+     NALPHA=20.0,
+     ALSCHD(1)= -16.0, -8.0, -6.0, -4.0, -2.0, -1.0, 0.0, 1.0, 2.0,  4.0, 6.0,
+         8.0, 10.0, 12.0, 14.0, 16.0, 18.0, 19.0, 20.0, 21.0,
+     STMACH=0.7, TSMACH=1.4, TR=1.0$
+
+ $OPTINS ROUGFC=0.25E-3, SREF=7.5$
+# $OPTINS CBARR=2.5, BLREF=12.
+
+ $SYNTHS XCG= 0.127, ZCG= 0.295
+         XW=-0.266,ZW= 0.19, ALIW=2.0,
+         XH= 2.239,ZH= 0.32, ALIH=1.5,
+         XV= 2.224,SCALE=1.0, VERTUP=.TRUE.$
+* Body
+
+ $BODY NX=12.0,
+       X(1) =-0.575,-0.438,-0.206, 0.025, 0.358, 0.812, 1.119, 1.518, 1.930,
+              2.358, 2.662, 2.957,
+       R(1) = 0.099, 0.191, 0.222, 0.222, 0.300, 0.300, 0.216, 0.168, 0.135,
+              0.089, 0.054, 0.033,
+       ZU(1)= 0.069, 0.200, 0.256, 0.322, 0.514, 0.703, 0.702, 0.663, 0.590,
+              0.511, 0.450, 0.335,
+       ZL(1)=-0.069,-0.343,-0.450,-0.451,-0.438,-0.397,-0.339,-0.252,-0.169,
+             -0.076,-0.015, 0.054,
+       P(1) = 0.528, 1.498, 2.150, 2.305, 2.971, 3.254, 2.693, 2.267, 1.745,
+              1.361, 1.047, 0.636,
+       S(1) = 0.021, 0.168, 0.293, 0.325, 0.547, 0.632, 0.411, 0.278, 0.174,
+              0.093, 0.046, 0.017,
+
+#       X(1) =-0.841,-0.704,-0.472,-0.241, 0.092, 0.546, 0.853, 1.252, 1.664,
+#              2.092, 2.396, 2.691,
+#       ZU(1)= 0.069, 0.200, 0.256, 0.322, 0.489, 0.603, 0.437, 0.413, 0.390,
+#              0.366, 0.350, 0.335,
+#       P(1) = 0.528, 1.665, 2.070, 2.191, 3.054, 3.200, 2.174, 1.800, 1.492,
+#              1.116, 0.899, 0.659,
+#       S(1) = 0.021, 0.168, 0.293, 0.325, 0.392, 0.435, 0.286, 0.202, 0.128,
+#              0.070, 0.036, 0.017,
+#Z[average]	0.069	0.272	0.353	0.387	0.464	0.500	0.388	0.333	0.280	0.221	0.183	0.141
+#P[rectang]	0.672	1.850	2.300	2.434	3.054	3.200	2.416	2.000	1.658	1.240	0.946	0.694
+#P[circle]	0.528	1.453	1.806	1.912	2.399	2.513	1.898	1.571	1.302	0.974	0.743	0.545
+#P[diamond]	0.483	1.328	1.668	1.783	2.208	2.332	1.776	1.489	1.242	0.953	0.761	0.577
+#S[square]	0.027	0.207	0.313	0.343	0.556	0.600	0.335	0.223	0.151	0.079	0.039	0.019
+#S[circle]	0.021	0.163	0.246	0.270	0.437	0.471	0.263	0.175	0.119	0.062	0.031	0.015
+#S[diamond]	0.014	0.104	0.157	0.172	0.278	0.300	0.168	0.111	0.075	0.039	0.020	0.009
+       BNOSE=2.0, BTAIL=1.0,
+       BLN=.25,   BLA=1.0,
+       ITYPE=3.0, METHOD=1.0$
+
+ $WGPLNF CHRDTP=1.063, CHRDR=1.405,
+         SSPNE= 2.726, SSPN=2.950,
+         SAVSI= 0.0,   CHSTAT=0.0,
+         TWISTA=0.0, DHDADI=5.5,  TYPE=1.0$
+NACA W 5 43012
+
+CASEID ----- Nipper Wing Body ----- 
+#DAMP
+SAVE
+#DUMP DYN
+NEXT CASE
+
+ $HTPLNF TYPE=1.0,    CHRDR=0.788,CHRDTP=0.597,
+         SSPNE=0.97, SSPN=1.04, SAVSI=5.0,
+         CHSTAT=0.0, TWISTA=0.0, DHDADI=0.0,
+         SHB=0., SEXT=0., RLPH=6.66$ ! I Guessed at these numbers
+
+NACA H 4 0009
+
+***********************************
+*    Elevator Deflection parameters
+***********************************
+*   FTYPE   Flap type
+*              1.0  Plain flaps
+*   NDELTA  Number of flap or slat deflection angles, max of 9
+*   DELTA   Flap deflection angles measured streamwise
+*           (NDELTA values in array)
+*   PHETE   Tangent of airfoil trailine edge angle based on ordinates at
+*           90 and 99 percent chord
+*   PHETEP  Tangent of airfoil trailing edge angle based on ordinates at
+*           95 and 99 percent chord
+*   CHRDFI  Flap chord at inboard end of flap, measured parallel to
+*           longitudinal axis
+*   CHRDFO  Flap chord at outboard end of flap, measured parallel to
+*           longitudinal axis
+*   SPANFI  Span location of inboard end of flap, measured perpendicular
+*           to vertical plane of symmetry
+*   SPANFO  Span location of outboard end of flap, measured perpendicular
+*           to vertical plane of symmetry
+*   CB      Average chord of the balance    (plain flaps only)
+*   TC      Average thickness of the control at hinge line
+*           (plain flaps only)
+
+ $SYMFLP FTYPE=1.0,
+         NDELTA=9.0, DELTA(1)=-20.0,-15.0,-10.0,-5.0,0.0,5.0,10.0,15.0,20.0,
+         PHETE=0.0522, PHETEP=0.0523,
+         CHRDFI=0.345,  CHRDFO=.269,
+         SPANFI=0.18,   SPANFO=1.04,
+         CB=0.84,      TC=0.1,         NTYPE=1.0$ 
+
+ $VTPLNF TYPE=1.0,   CHRDR=1.09, CHRDTP=0.521,
+         SSPNE=0.71, SSPN=1.06,
+         SAVSI=22.5, CHSTAT=0.0$
+
+NACA V 4 0009
+CASEID ----- Nipper Final ----- 
+#DAMP
+TRIM
+SAVE
+NEXT CASE

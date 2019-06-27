@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <name>Sample Instrument Panel</name>
+    <w>375</w> <!-- screen width: 375mm -->
+    <h>305</h> <!-- screen height: 305mm -->
+    <instruments>
+        <!-- use FlightGear's c172 attitude indicator -->
+        <instrument include="../../Instruments/ati-c172s.xml">
+            <name>Attitude Gyro</name>
+            <x alias="../../../params/col-2"/>
+            <y alias="../../../params/row-1"/>
+            <w>80</w>
+            <h>80</h>
+        </instrument>
+    </instruments>
+</PropertyList>

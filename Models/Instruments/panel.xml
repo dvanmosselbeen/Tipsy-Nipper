@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>panel.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>20</max-m>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>Panel_MKII</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.2</green>
+            <blue>0.0</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+    </animation>
+
+    <!--instrumentation-->
+    <model>
+        <name>Altimeter</name>
+        <path>Aircraft/Nipper/Models/Instruments/Altimeter/Altimeter.xml</path>
+        <offsets>
+            <x-m> 0.105</x-m>
+            <y-m>-0.1425</y-m>
+            <z-m> 0.05396</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ASI</name>
+        <path>Aircraft/Nipper/Models/Instruments/ASI/asi.xml</path>
+        <offsets>
+            <x-m> 0.105</x-m>
+            <y-m>-0.07141</y-m>
+            <z-m> 0.04546</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/Nipper/Models/Instruments/M760/M760.xml</path>
+        <offsets>
+            <x-m> 0.09950 </x-m>
+            <y-m> 0.0 </y-m>
+            <z-m> 0.04546</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>RPM</name>
+        <path>Aircraft/Nipper/Models/Instruments/RPM/RPM.xml</path>
+        <offsets>
+            <x-m> 0.105</x-m>
+            <y-m> 0.07141</y-m>
+            <z-m> 0.04546</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>FlightTime</name>
+        <path>Aircraft/Nipper/Models/Instruments/FlightTime/FlightTime.xml</path>
+        <offsets>
+            <x-m> 0.105</x-m>
+            <y-m> 0.1433</y-m>
+            <z-m> 0.05848</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Ignition</name>
+        <path>Aircraft/Nipper/Models/Instruments/Ignition/Ignition.xml</path>
+        <offsets>
+            <x-m> 0.105</x-m>
+            <y-m>-0.09988</y-m>
+            <z-m> 0.09494</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>G Meter</name>
+        <path>Aircraft/Nipper/Models/Instruments/GMeter/GMeter.xml</path>
+        <offsets>
+            <x-m> 0.105</x-m>
+            <y-m>-0.05446</y-m>
+            <z-m> 0.1064</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Bank</name>
+        <path>Aircraft/Nipper/Models/Instruments/Bank/Bank.xml</path>
+        <offsets>
+            <x-m> 0.105</x-m>
+            <y-m> 0.0</y-m>
+            <z-m> 0.1064</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>MagCompass</name>
+        <path>Aircraft/Nipper/Models/Instruments/MagneticCompass/MagneticCompass.xml</path>
+        <offsets>
+            <x-m> 0.105</x-m>
+            <y-m> 0.05446</y-m>
+            <z-m> 0.1064</z-m>
+        </offsets>
+    </model>
+
+    <!-- Labelling -->
+    <text>
+        <name>LabelPanelVersion</name>
+        <type type="string">literal</type>
+        <text type="string">Tipsy Nipper MKII</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.012</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.2</max-height>
+        <max-width>0.2</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m> 0.13</x-m>
+            <y-m>-0.0</y-m>
+            <z-m> 0.14</z-m>
+        </offsets>
+    </text>
+    
+    <text>
+        <name>LabelAltimeter</name>
+        <type type="string">literal</type>
+        <text type="string">Altimeter (ft)</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.012</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.2</max-height>
+        <max-width>0.07</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m> 0.13</x-m>
+            <y-m>-0.1425</y-m>
+            <z-m> 0.05396</z-m>
+        </offsets>
+    </text>
+
+    <text>
+        <name>LabelASI</name>
+        <type type="string">literal</type>
+        <text type="string">ASI</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.012</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.2</max-height>
+        <max-width>0.07</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m> 0.13</x-m>
+            <y-m>-0.0714</y-m>
+            <z-m> 0.04546</z-m>
+        </offsets>
+    </text>
+
+    <text>
+        <name>LabelRadio</name>
+        <type type="string">literal</type>
+        <text type="string">Radio</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.012</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.2</max-height>
+        <max-width>0.07</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m> 0.13</x-m>
+            <y-m> 0.0</y-m>
+            <z-m> 0.04546</z-m>
+        </offsets>
+    </text>
+
+    <text>
+        <name>LabelRPM</name>
+        <type type="string">literal</type>
+        <text type="string">RPM</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.012</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.2</max-height>
+        <max-width>0.07</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+	    <x-m> 0.13</x-m>
+            <y-m> 0.07141</y-m>
+            <z-m> 0.04546</z-m>
+        </offsets>
+    </text>
+    
+    <text>
+        <name>LabelFlightTime</name>
+        <type type="string">literal</type>
+        <text type="string">FlightTime</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.012</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.2</max-height>
+        <max-width>0.07</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m> 0.13</x-m>
+            <y-m> 0.1433</y-m>
+            <z-m> 0.05848</z-m>
+        </offsets>
+    </text>
+
+    <text>
+        <name>LabelIgnition</name>
+        <type type="string">literal</type>
+        <text type="string">Ignition</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.012</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.2</max-height>
+        <max-width>0.07</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m> 0.13</x-m>
+            <y-m>-0.09988</y-m>
+            <z-m> 0.1064</z-m>
+        </offsets>
+    </text>
+
+    <text>
+        <name>LabelG</name>
+        <type type="string">literal</type>
+        <text type="string">G Meter</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.012</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.2</max-height>
+        <max-width>0.07</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m> 0.13</x-m>
+            <y-m>-0.05446</y-m>
+            <z-m> 0.1064</z-m>
+        </offsets>
+    </text>
+
+    <text>
+        <name>LabelBank</name>
+        <type type="string">literal</type>
+        <text type="string">Bank</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.012</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.2</max-height>
+        <max-width>0.07</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m> 0.13</x-m>
+            <y-m> 0.0</y-m>
+            <z-m> 0.1064</z-m>
+        </offsets>
+    </text>
+
+    <text>
+        <name>LabelCompas</name>
+        <type type="string">literal</type>
+        <text type="string">Compas</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.012</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.2</max-height>
+        <max-width>0.07</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m> 0.13</x-m>
+            <y-m> 0.05</y-m>
+            <z-m> 0.1064</z-m>
+        </offsets>
+    </text>
+
+    <animation>
+        <type>material</type>
+        <object-name>LabelPanelVersion</object-name>
+        <object-name>LabelAltimeter</object-name>
+        <object-name>LabelASI</object-name>
+        <object-name>LabelRadio</object-name>
+        <object-name>LabelRPM</object-name>
+        <object-name>LabelFlightTime</object-name>
+        <object-name>LabelIgnition</object-name>
+        <object-name>LabelG</object-name>
+        <object-name>LabelBank</object-name>
+        <object-name>LabelCompas</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.0</blue>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>LabelPanelVersion</object-name>
+        <object-name>LabelAltimeter</object-name>
+        <object-name>LabelASI</object-name>
+        <object-name>LabelRadio</object-name>
+        <object-name>LabelRPM</object-name>
+        <object-name>LabelFlightTime</object-name>
+        <object-name>LabelIgnition</object-name>
+        <object-name>LabelG</object-name>
+        <object-name>LabelBank</object-name>
+        <object-name>LabelCompas</object-name>
+        <condition>
+            <property>/sim/panel-hotspots</property>
+        </condition>
+    </animation>
+
+</PropertyList>  

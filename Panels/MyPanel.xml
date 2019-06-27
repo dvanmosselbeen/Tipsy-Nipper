@@ -1,0 +1,34 @@
+<PropertyList>
+
+  <!-- true: run full-screen, false; run in window -->
+  <game-mode type="bool">false</game-mode>
+
+  <!-- include the panel definitions (2d-panel syntax)-->
+  <panel include="sample-2d-panel.xml"/>
+
+  <!-- compose your property-tree here -->
+  <sim>
+    <panel>
+      <flip-x type="bool">false</flip-x>
+    </panel>
+    <instrument-options>
+      <omit-knobs type="bool">true</omit-knobs>
+    </instrument-options>
+  </sim>
+
+  <!-- network communication settings -->
+  <communication>
+    <listen>
+      <!-- interface to bind to, 
+           leave empty for all interfaces -->
+      <host>192.168.0.12</host> <!-- multicast address! -->
+      <port>5432</port> <!-- tcp port to listen to -->
+      <style>udp</style> <!-- udp or tcp (forget about tcp!) -->
+    </listen>
+
+    <!-- the generic protocol definition 
+         same as used for fgfs (minus_minus)generic=foobar option
+    -->
+    <protocol include="SampleProtocol.xml"/>
+  </communication>
+</PropertyList>

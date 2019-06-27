@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>Bank.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>BankFace</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.2</green>
+            <blue>0.0</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+    </animation>
+
+    <animation> 
+        <type>rotate</type>
+        <object-name>BankFace.001</object-name>
+        <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+        <factor>20.0</factor>
+        <min-deg>-62</min-deg>
+        <max-deg>62</max-deg>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>   
+
+</PropertyList>
