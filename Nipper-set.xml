@@ -8,8 +8,8 @@
 <PropertyList include="Nipper-base.xml">
 
     <sim>
-        <description>Tippsy Nipper</description>
-        <author>Dave Van Mosselbeen - Ron Jensen</author>
+        <description>Tipsy Nipper</description>
+        <author>David Van Mosselbeen - Ron Jensen</author>
         <flight-model>jsb</flight-model>
         <aero>Nipper</aero>
         <status>alpha</status>
